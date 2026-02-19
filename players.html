@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Players</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, rgb(216, 154, 154), rgb(255, 255, 161), lightgreen, lightblue);
+        }
+
+        .navbar {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95); 
+            padding: 12px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h3 {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            margin-left: 10px;
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 13px;
+            color: black;
+            font-weight: 500;
+        }
+
+        .signup { 
+            background: linear-gradient(to right, rgb(216, 154, 154), rgb(255, 255, 161), lightgreen, lightblue); 
+        }
+
+        .team { 
+            background: linear-gradient(to right, rgb(216, 154, 154), rgb(255, 255, 161), lightgreen, lightblue); 
+        }
+
+        .players { 
+            background: linear-gradient(to right, rgb(216, 154, 154), rgb(255, 255, 161), lightgreen, lightblue); 
+        }
+
+        .signup:hover, .team:hover, .players:hover { 
+            opacity: 0.7; 
+        }
+
+        .wrapper {
+            min-height: 50vh;          
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;  
+            padding: 20px 0;          
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            width: 400px;
+            max-height: 80vh;       
+            overflow:auto;         
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            background: linear-gradient(to right, rgb(216, 154, 154), rgb(255, 255, 161), lightgreen, lightblue);
+            color: rgb(66, 63, 63);
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            opacity: 0.7;
+        }
+
+        footer {
+            background: linear-gradient(to right, rgb(201, 111, 111), rgb(255, 255, 133), rgb(114, 240, 114), rgb(125, 211, 240));
+            color: gray;
+            text-align: center;
+            font-weight: bold;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <h3>OBMC Intramurals SY 2025-2026</h3>
+        <div class="nav-links">
+            <a href="index.html" class="signup">Sign Up</a>
+            <a href="team_checker.html" class="team">Team Checker</a>
+            <a href="players.html" class="players">Players</a>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="container">
+            <h2><strong>List of Players:</strong></h2>
+
+            <button onclick="players()" class="btn">Click here!</button>
+
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <py-script src="players.py"></py-script>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <footer>
+    © 2026 Anika Magpantay & Andrei Tecson
+    </footer>
+
+</body>
+</html>
