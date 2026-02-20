@@ -1,6 +1,6 @@
 from pyscript import document, window
 
-NAMES = [
+NAMES = [ # need this list so that the loop can print it
     "Nathan Abaca",
     "Thea Alavado",
     "Maiah Arenal",
@@ -32,10 +32,11 @@ NAMES = [
 ]
 
 def players(*args):
-    result = document.getElementById("result")
-    lines = []
-    for i, name in enumerate(NAMES, start=1):
+    result = document.getElementById("result") #so that it knows what and where to print the result/list in
+    lines = [] 
+    for i, name in enumerate(NAMES, start=1): # a for loop that prints out the NAME list, the enumerate makes it so that it is automatically numbered
         lines.append(f"{i}. {name}")
     result.innerHTML = "<br>".join(lines)
 
-window.players = players
+
+window.players = players # this is so that the function will work when the button is pressed
